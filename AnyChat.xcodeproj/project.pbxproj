@@ -10,7 +10,10 @@
 		43DF38FA6692964D68EBBF62 /* Pods_AnyChat_AnyChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75ECE8134769FD7A38F04162 /* Pods_AnyChat_AnyChatUITests.framework */; };
 		5F81C5F9EEEB83F38D094B90 /* Pods_AnyChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73584E331FC245AF0631B6CE /* Pods_AnyChatTests.framework */; };
 		876E5476589439740772F898 /* Pods_AnyChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D937762B2AE1B25C1196CBD /* Pods_AnyChat.framework */; };
+		C623BB3323C70DD3008CA2DF /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623BB3223C70DD2008CA2DF /* SwiftyUserDefaults.swift */; };
+		C623BB3523C70E45008CA2DF /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623BB3423C70E45008CA2DF /* DefaultsKeys.swift */; };
 		C65A6B4123C6FC2E00D6751E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C602CE6923C6F78000750521 /* MainTabBarController.swift */; };
+		C65A6B4823C7098200D6751E /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A6B4723C7098200D6751E /* LoginManager.swift */; };
 		C6760C042383D5B300DF2CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760C032383D5B300DF2CBE /* AppDelegate.swift */; };
 		C6760C062383D5B300DF2CBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760C052383D5B300DF2CBE /* SceneDelegate.swift */; };
 		C6760C082383D5B300DF2CBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760C072383D5B300DF2CBE /* ViewController.swift */; };
@@ -51,6 +54,9 @@
 		8DEC08244343950007AA2DD3 /* Pods-AnyChat-AnyChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyChat-AnyChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-AnyChat-AnyChatUITests/Pods-AnyChat-AnyChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40AF558F22C181A600B5830 /* Pods-AnyChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyChatTests.debug.xcconfig"; path = "Target Support Files/Pods-AnyChatTests/Pods-AnyChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C602CE6923C6F78000750521 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		C623BB3223C70DD2008CA2DF /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
+		C623BB3423C70E45008CA2DF /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
+		C65A6B4723C7098200D6751E /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		C6760C002383D5B300DF2CBE /* AnyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6760C032383D5B300DF2CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6760C052383D5B300DF2CBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 		C602CE6123C6F31D00750521 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C65A6B4223C7053B00D6751E /* lib */,
+				C65A6B4623C7097300D6751E /* Manager */,
+				C65A6B4523C7059800D6751E /* Utility */,
 				C602CE6223C6F32D00750521 /* ViewController */,
 			);
 			path = Source;
@@ -160,6 +169,30 @@
 				C602CE6923C6F78000750521 /* MainTabBarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C65A6B4223C7053B00D6751E /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C623BB3223C70DD2008CA2DF /* SwiftyUserDefaults.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C65A6B4523C7059800D6751E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C623BB3423C70E45008CA2DF /* DefaultsKeys.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C65A6B4623C7097300D6751E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C65A6B4723C7098200D6751E /* LoginManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C6760BF72383D5B300DF2CBE = {
@@ -468,8 +501,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C623BB3323C70DD3008CA2DF /* SwiftyUserDefaults.swift in Sources */,
+				C623BB3523C70E45008CA2DF /* DefaultsKeys.swift in Sources */,
 				C6760C0E2383D5B300DF2CBE /* AnyChat.xcdatamodeld in Sources */,
 				C6760C082383D5B300DF2CBE /* ViewController.swift in Sources */,
+				C65A6B4823C7098200D6751E /* LoginManager.swift in Sources */,
 				C65A6B4123C6FC2E00D6751E /* MainTabBarController.swift in Sources */,
 				C6760C042383D5B300DF2CBE /* AppDelegate.swift in Sources */,
 				C6760C3A2383E6F200DF2CBE /* AppDelegate + MessagingDelegate.swift in Sources */,
