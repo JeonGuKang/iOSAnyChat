@@ -8,6 +8,3 @@
 
 import Foundation
 
-extension AppDelegate : MessagingDelegate {
-    func 
-}
